@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <!-- Title of module -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Module Title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"/>
+
+    <!-- Video section -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Toggle buttons: Steps / Doc -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp">
+
+        <Button
+            android:id="@+id/btnStep"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Steps"
+            android:backgroundTint="@color/activeButton"
+            android:textColor="@color/buttonText"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnDoc"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Doc"
+            android:backgroundTint="@color/inactiveButton"
+            android:textColor="@color/buttonText" />
+    </LinearLayout>
+
+    <!-- WebView for Doc -->
+    <WebView
+        android:id="@+id/webViewDoc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <!-- TextView for Steps -->
+    <TextView
+        android:id="@+id/tvSteps"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:textSize="16sp" />
+
+</LinearLayout>
